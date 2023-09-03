@@ -17,3 +17,78 @@
 .show-bg {
   @apply bg-cyan-500;
 }
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: white;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.wrapper {
+  @apply max-w-7xl mx-auto w-[90%];
+}
+
+.arrow {
+  animation: 1.8s jump infinite ease 0s;
+}
+
+@keyframes jump {
+  0%,
+  10%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(60px);
+  }
+
+  60% {
+    transform: translateY(8px);
+  }
+}
+
+.polygon {
+  clip-path: polygon(0 30px, 93% 30px, 100% 0, 100% 100%, 0 100%);
+}
