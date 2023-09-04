@@ -9,7 +9,7 @@ import orangemb from "../../images/mobile/image-photography.jpg"
 
 import RespImage from "./RespImage"
 
-function Info({ scrollRef }) {
+function Info({ scrollRef, pointRef }) {
   return (
     <div className="flex flex-col md:grid md:grid-cols-2">
       <div className="order-0">
@@ -21,7 +21,11 @@ function Info({ scrollRef }) {
       </div>
       <div className="flex-center md:-order-1" ref={scrollRef}>
         <div className="lg:w-[65%] w-[85%] mx-auto text-center md:text-left flex flex-col justify-center items-center  gap-5  max-h-96 h-[20rem] sm:h-[24rem] md:items-start  ">
-          <div className="font-extrabold text-3xl font-fraunces text-black-h1">
+          <div
+            className="font-extrabold text-3xl font-fraunces text-black-h1"
+            ref={pointRef}
+            id="point"
+          >
             Transform your <br /> brand
           </div>
           <p className="max-w-lg mx-auto md:mx-0 text-gray-text  ">

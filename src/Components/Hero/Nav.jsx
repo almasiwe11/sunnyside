@@ -2,10 +2,10 @@ import { useState } from "react"
 import Hamburger from "./Hamburger"
 import Menu from "./Menu"
 
-function Nav({ inHero }) {
+function Nav({ show, hide }) {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className={`${!inHero ? "drop" : "drop-hidden"}`}>
+    <div className={`${show && "drop"} ${hide && "drop-hidden"}`}>
       <div className="wrapper  pt-4 flex justify-between items-center relative">
         <Logo />
 
