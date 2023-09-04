@@ -92,3 +92,50 @@
 .polygon {
   clip-path: polygon(0 30px, 93% 30px, 100% 0, 100% 100%, 0 100%);
 }
+
+.drop {
+  position: fixed;
+  top: 0;
+  height: 5rem;
+  width: 100vw;
+  background-color: rgba(62, 191, 255, 255);
+  animation: fadeDown 0.75s ease-out;
+  z-index: 100;
+}
+
+.drop-hidden {
+  animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0.4;
+    transform: translateY(-100%);
+  }
+
+  95% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+    position: fixed;
+    top: 0;
+    height: 5rem;
+    width: 100vw;
+    background-color: rgba(62, 191, 255, 255);
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

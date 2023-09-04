@@ -2,28 +2,30 @@ import { useState } from "react"
 import Hamburger from "./Hamburger"
 import Menu from "./Menu"
 
-function Nav() {
+function Nav({ inHero }) {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="wrapper  pt-4 flex justify-between items-center relative">
-      <Logo />
+    <div className={`${!inHero ? "drop" : "drop-hidden"}`}>
+      <div className="wrapper  pt-4 flex justify-between items-center relative">
+        <Logo />
 
-      <div className="">
-        <Menu
-          style={"text-white gap-3 hidden md:flex"}
-          active={"bg-white text-black font-semibold"}
-        />
-        <Hamburger setIsOpen={setIsOpen} isOpen={isOpen} />
-      </div>
-
-      {isOpen && (
-        <div className="absolute bg-white w-full mt-80 py-8 pt-12 polygon z-40 md:hidden">
+        <div className="">
           <Menu
-            style={"flex flex-col gap-2 text-gray-500 md:hidden text-xl "}
-            active={"bg-yellow font-semibold text-black"}
+            style={"text-white gap-3 hidden md:flex"}
+            active={"bg-white text-black-h1 font-semibold"}
           />
+          <Hamburger setIsOpen={setIsOpen} isOpen={isOpen} />
         </div>
-      )}
+
+        {isOpen && (
+          <div className="absolute bg-white w-full mt-80 py-8 pt-12 polygon z-40 md:hidden">
+            <Menu
+              style={"flex flex-col gap-2 text-gray-500 md:hidden text-xl "}
+              active={"bg-yellow font-semibold text-black"}
+            />
+          </div>
+        )}
+      </div>
     </div>
   )
 }

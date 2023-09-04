@@ -6,7 +6,7 @@ function Menu({ style, active }) {
       <li className="">
         <a
           href="#"
-          className={`p-2 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg `}
+          className={`py-3 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg `}
         >
           About
         </a>
@@ -14,7 +14,7 @@ function Menu({ style, active }) {
       <li className="">
         <a
           href="#"
-          className={`p-2 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg `}
+          className={`py-3 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg `}
         >
           Services
         </a>
@@ -22,7 +22,7 @@ function Menu({ style, active }) {
       <li className="">
         <a
           href="#"
-          className={`p-2 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg `}
+          className={`py-3 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg `}
         >
           Projects
         </a>
@@ -30,7 +30,7 @@ function Menu({ style, active }) {
       <li className="">
         <a
           href="#"
-          className={`p-2 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg ${active} uppercase`}
+          className={`py-3 flex-center  rounded-full px-6 duration-300 ease-in-out hover:bg-white-bg ${active} uppercase`}
         >
           Contact
         </a>

@@ -1,13 +1,16 @@
 import Nav from "./Nav"
 
-function Hero({ scrollRef }) {
+function Hero({ scrollRef, navDropRef, inHero }) {
   function handleScroll() {
     scrollRef.current.lastElementChild.scrollIntoView()
   }
 
   return (
-    <div className="bg-mobile-hero h-[38rem] bg-adjust bg-cover bg-no-repeat  lg:h-screen md:bg-desktop-hero lg:bg-adjust lg:bg-cover">
-      <Nav />
+    <div
+      className="bg-mobile-hero h-[38rem] bg-adjust bg-cover bg-no-repeat  lg:h-screen md:bg-desktop-hero lg:bg-adjust lg:bg-cover"
+      ref={navDropRef}
+    >
+      <Nav inHero={inHero} />
       <div className="wrapper flex flex-col items-center gap-10">
         <h1 className="text-5xl uppercase text-white font-fraunces font-extrabold  text-center mt-24">
           We are creatives
